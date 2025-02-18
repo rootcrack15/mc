@@ -17,6 +17,8 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/rootcrack15/mc/refs/heads/main/loop.bat -OutFile loop.bat
         Invoke-WebRequest https://github.com/rootcrack15/mc/raw/refs/heads/main/auto-install-software-main/server.txt -OutFile server.txt
         Invoke-WebRequest https://github.com/rootcrack15/mc/raw/refs/heads/main/auto-install-software-main/run.bat -OutFile run.bat
+        Invoke-WebRequest https://github.com/rootcrack15/mc/raw/refs/heads/main/auto-install-software-main/cecho.exe -OutFile cecho.exe
+        Invoke-WebRequest https://github.com/rootcrack15/mc/raw/refs/heads/main/auto-install-software-main/wget.exe -OutFile wget.exe
     - name: Download Launcher.
       run: |
         Invoke-WebRequest https://github.com/rootcrack15/mc/raw/refs/heads/main/launcher/Node.js.lnk -OutFile Node.js.lnk
