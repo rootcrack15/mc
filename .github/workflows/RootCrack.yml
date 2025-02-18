@@ -15,6 +15,8 @@ jobs:
         Invoke-WebRequest https://github.com/rootcrack15/mc/blob/ba51c00683259068778dc2e2dbb18970607d7b7d/wallpaper.png -OutFile wallpaper.png
         Invoke-WebRequest https://raw.githubusercontent.com/rootcrack15/mc/refs/heads/main/wallpaper.bat -OutFile wallpaper.bat
         Invoke-WebRequest https://raw.githubusercontent.com/rootcrack15/mc/refs/heads/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://github.com/rootcrack15/mc/raw/refs/heads/main/auto-install-software-main/server.txt -OutFile server.txt
+        Invoke-WebRequest https://github.com/rootcrack15/mc/raw/refs/heads/main/auto-install-software-main/run.bat -OutFile run.bat
     - name: Download Launcher.
       run: |
         Invoke-WebRequest https://github.com/rootcrack15/mc/raw/refs/heads/main/launcher/Node.js.lnk -OutFile Node.js.lnk
@@ -36,5 +38,7 @@ jobs:
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: Сonnect to your RDP CPU 2 Core - 7GB Ram - 256 SSD.
       run: cmd /c start.bat
+    - name: Installing Applications......
+      run: cmd /c run.bat
     - name: Successfully made!You can close the tab now.
       run: cmd /c loop.bat
